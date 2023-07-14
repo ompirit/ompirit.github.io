@@ -34,3 +34,12 @@ gem "puma", "< 7"
 
 # Or for faster parsing of HTML-only resources via Inspectors, use Nokolexbor:
 # gem "nokolexbor", "~> 0.4"
+
+gem "bridgetown-cloudinary", "~> 2.1"
+gem "bridgetown-svg-inliner", "~> 1.0"
+gem "bridgetown-view-component", "~> 1.0"
+
+group :development do
+  gem 'standard'
+  gem 'solargraph'
+end
