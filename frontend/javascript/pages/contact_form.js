@@ -1,11 +1,12 @@
-import "$styles/index.css"
-import "$styles/syntax-highlighting.css"
+import { contact_form } from "@hotwired/stimulus";
 
-// Import all JavaScript & CSS files from src/_components
-import components from "$components/**/*.{js,jsx,js.rb,css}"
+const contact_form = Application.start();
 
-console.info("Bridgetown is loaded!")
+// Configure Stimulus development experience
+application.debug = false;
+window.Stimulus = application;
 
+export { contact_form };
 
 // Add active class to the current button (highlight it)
 var header = document.getElementById("navbarSupportedContent");

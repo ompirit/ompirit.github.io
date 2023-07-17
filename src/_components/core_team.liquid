@@ -1,0 +1,238 @@
+<style>
+  .hr12221 {
+  margin-top: auto;
+}
+
+.teams1{
+  margin-top: 188px;
+}
+
+.card000 {
+  background-color: black;
+}
+
+.card000:hover{
+  transform: scale(1.04);
+  transition: 0.3s
+}
+
+.card001 {
+  margin-top: -25%;
+  margin-left: 20px;
+  margin-right: 25px;
+  background-color: rgb(92, 118, 141);
+  opacity: 0.85;
+}
+
+.social{
+  justify-content: center;
+  list-style: none;
+  display: flex;
+}
+.card001 h5::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  left: calc(50% - 25px);
+  margin-top: 5px;
+}
+
+ .social-icon{
+
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 27px;
+  margin-right: 11px;
+  cursor: pointer;
+  
+}
+
+
+.social-icon:hover{
+  color: #56CCF2;
+}
+
+@media (max-width: 1199px) {
+  body {
+    .teams1{
+      margin-top: 188px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    .teams1{
+      margin-top: 100px;
+    }
+
+    .rowa1{
+      display: flex;
+    }
+
+    .card000 {
+      width: 210px;
+      height: 210px;
+    }
+
+    .card001 {
+      margin-right: 10px;
+    }
+
+    .card001 h5 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .card001 span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .li12 {
+      margin-left: -20px;
+    }
+
+    .social-icon {
+      width: auto;
+      height: auto;
+    }
+
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    .teams1 {
+      transform: rotate(90deg);
+      margin-left: 122px;
+      margin-top: 10%;
+    }
+
+    .rowa1{
+      margin-top: -80%;
+    }
+
+    .card000 {
+      width: 100%;
+      height: auto;
+    }
+
+    .card001 {
+      margin-right: 20px;
+    }
+  }
+}     
+
+@media (max-width: 575px) {
+  body {
+    .teams1 {
+      margin-left: 22%;
+    }
+
+    .team21 {
+      margin-bottom: 20px;
+    }
+
+    .card001 {
+      margin-top: -50px;
+    }
+
+    .rowa1{
+      margin-top: -80%;
+    }
+  }
+}  
+
+.coreteam{
+  margin-top: 100px;
+}
+</style>
+
+
+<section id="three">
+  <div class="coreteam">
+    <div class="row mt-5">
+      <div class="col-md-1 text-white teams1">
+        <div class="rotate1">
+    				<div>
+    				  <span class="hr-lines1">Core Team</span>
+    				</div>
+    			</div>
+      </div>
+
+      <div class="col-md-11 text-white">
+        <div class="row rowa1">
+          <div class="col-md-4 col-sm-6 team21">
+            <div class="core-team">
+              <div class="imgab">
+                <div class="card card000">
+                  <img src="{{ '/images/sarbada2.jpg' | relative_url }}" class="123img" alt="Logo" />
+                </div>
+              </div>
+            
+              <div class="card text-dark text-center card001">
+                <h5 class="title text-white mt-3">Sarbada Nandan Jaiswal</h5>
+                <span class="post text-white">CTO</span>
+            
+                <ul class="social">
+                  <li class="li12"><a href="https://twitter.com/SARBADAJ" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                  <li class=""><a href="https://www.linkedin.com/in/sarbada-nanda-jaiswal-6a461aba/" class="social-icon"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                </ul>
+              </div>  
+            </div>
+          </div>
+        
+
+          <div class="col-md-4 col-sm-6 team21">
+            <div class="core-team">
+              <div class="imgab">
+                <div class="card card000">
+                  <img src="{{ '/images/shajed.jpg' | relative_url }}" class="123img" alt="Logo" />
+                </div>
+              </div>
+
+              <div class="card text-dark text-center card001">
+                <h5 class="title text-white mt-3">Sazid Ansari</h5>
+                <span class="post text-white">Senior Software Engineer</span>
+            
+                <ul class="social">
+                  <li class="li12"><a href="https://twitter.com/SazidAn05990722" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                  <li><a href="https://www.linkedin.com/in/sazid-ansari/" class="social-icon"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                </ul>
+              </div>  
+            </div>
+          </div>
+
+
+          <div class="col-md-4 col-sm-6 team21">
+            <div class="core-team">
+              <div class="imgab">
+                <div class="card card000">
+                  <img src="{{ '/images/deva2.jpg' | relative_url }}" class="123img" alt="Logo" />
+                </div>
+              </div>
+              <div class="card text-dark text-center card001">
+                <h5 class="title text-white mt-3">Deva Nandan Jaiswal</h5>
+                <span class="post text-white">Senior Frontend Devloper</span>
+              
+                <ul class="social">
+                  <li class="li12"><a href="https://twitter.com/Devanandan1122" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                  <li><a href="https://www.linkedin.com/in/deva-nandan-jaiswal-64561222a/" class="social-icon"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                </ul>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>  
+</section>  
+
