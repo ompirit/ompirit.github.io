@@ -25,6 +25,15 @@ const postcss = require("postcss")
 const postCssImport = require("postcss-import")
 const readCache = require("read-cache")
 
+const ruby2js = require("@ruby2js/esbuild-plugin")
+
+const esbuildOptions = {
+  entryPoints: ["./frontend/javascript/index.js.rb"],
+  plugins: [
+    ruby2js(),
+  ]
+}
+
 // Detect if an NPM package is available
 const moduleAvailable = name => {
   try {

@@ -1,0 +1,188 @@
+<style>
+  .hr-lines::before {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    right: 20px;
+  }
+
+  .rotate {
+    white-space: nowrap;
+    width: 0;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+
+    translate: (0px, 110px);
+    transform: rotate(-90deg);
+    margin-top: 70%;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  .h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 59px;
+    font-style: normal;
+    width: 278px;
+    height: 59px;
+    color: #e0e0e0;
+  }
+
+  .p1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    font-style: normal;
+    width: 486px;
+    height: 96px;
+    color: #828282;
+  }
+
+  @media (max-width: 1399px) {
+    body {
+      .p1 {
+        width: 419px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    body {
+      .services {
+        max-width: 1199px;
+      }
+
+      .rotate12 {
+        margin-top: 10%;
+      }
+
+      .h3 {
+        font-size: 20px;
+      }
+
+      .p1 {
+        font-size: 16px;
+        width: 350px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    body {
+      .services {
+        max-width: 991px;
+      }
+
+      .h3 {
+        font-size: 16px;
+      }
+      .p1 {
+        width: 260px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .hr-lines::before {
+        width: 50px;
+      }
+      .rotate {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    body {
+      .rotate12 {
+        transform: rotate(90deg);
+        margin-left: 122px;
+      }
+
+      .rotate121 {
+        margin-top: -70%;
+      }
+    }
+  }  
+
+  @media (max-width: 575px) {
+    body {
+      .rotate12 {
+        margin-left: 20%;
+      }
+
+      .col55 {
+        width: 100%;
+        text-align: -webkit-center;
+      }
+
+      .col77 {
+        width: 100%;
+        text-align: -webkit-center;
+      }
+    }
+  }
+
+
+  .services1{
+    margin-top: 100px;
+  }
+</style>
+
+<section id="one">
+  <div class="services1 container">
+    <div class="row mt-5 services">
+      <div class="col-md-4 text-white rotate12">
+        <div class="rotate">
+    				<div>
+    				  <span class="hr-lines">SERVICES</span>
+    				</div>
+    			</div>
+      </div>
+
+      <div class="col-md-8 text-white rotate121">
+        <div class="row">
+          <div class="col-5 col55">
+            <h3 class="h3">Software development</h3>
+          </div>
+          <div class="col-7 col77">
+            <p class="p1">We Approach web development in the same way we approach mobiile development - by beginning and  enging with the user.</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-5 col55">
+            <h3 class="h3">Mobile Development</h3>
+          </div>
+          <div class="col-7 col77">
+            <p class="p1">Our iterative design process & focus on validation ensures you avoid unnecessary features and costs, ending with a beautifual app built to satisfy users</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-5 col55">
+            <h3 class="h3">UI/UX Design</h3>
+          </div>
+          <div class="col-7  col77">
+            <p class="p1">We can bring the knowledge & experience we’ve gained from designing hundresd of app to refine your product -  or design a new one from scratch.</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-5 col55">
+            <h3 class="h3">DevOps</h3>
+          </div>
+          <div class="col-7 col77">
+            <p class="p1">Accelerate and transform your business with comprehensive DevOps services. We provide end-to-end solutions to attain higher code standards, faster delivery, automation, efficiency, and innovation</p>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>  
+</section>  

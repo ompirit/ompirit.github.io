@@ -7,6 +7,7 @@
     "esbuild-dev": "node esbuild.config.js --watch"
   },
   "devDependencies": {
+    "@ruby2js/esbuild-plugin": "^1.0.0",
     "esbuild": "^0.17.19",
     "glob": "^10.2.6",
     "postcss": "^8.4.23",
