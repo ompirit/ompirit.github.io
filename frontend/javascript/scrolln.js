@@ -1,5 +1,4 @@
 function ready() {
-  console.log("hellllllllll---->");
   // Add active class to the current button (highlight it)
   var header = document.getElementById("navbarSupportedContent");
   var btns = header.getElementsByClassName("nav-item");
