@@ -42,4 +42,19 @@ function ready() {
   });
 }
 
+
+function toggleClassOnClick() {
+  const div = document.getElementById("navbarSupportedContent");
+
+  if (div.classList.contains("show")) {
+    div.classList.remove("show");
+  } else {
+    div.classList.add("show");
+  }
+}
+
+const button = document.getElementById("toggleButton");
+button.addEventListener("click", toggleClassOnClick);
+
+
 document.addEventListener("DOMContentLoaded", ready);
