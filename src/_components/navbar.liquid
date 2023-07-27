@@ -1,116 +1,4 @@
 <header>
-  <style>
-.navbar-expand-lg {
-  height: 80px;
-  opacity: 0.95;
-}
-
-.om1 {
-  width: 66.4px;
-  height: 47px;
-  color: #56ccf2;
-  font-family: Work Sans;
-  font-weight: 600;
-  font-size: 39.06px;
-  line-height: 45.82px;
-}
-
-.pirit1 {
-  width: 66.4px;
-  height: 47px;
-  font-family: Work Sans;
-  font-weight: 600;
-  font-size: 39.06px;
-  line-height: 45.82px;
-}
-
-.nav1 {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 14px;
-  color: white;
-}
-
-.nav1:hover {
-  color: #56CCF2;
-}
-
-// Target parent wlement with ID for specificty
-#navbarSupportedContent {
-  // Regular state
-  .nav-item a {
-    color: #fff;
-  }
-
-  // Active state
-  .nav-item.active a {
-    color: #56ccf2;
-    transition: 0.3 ease background-color;
-  }
-
-  .nav-item.active .nav12 {
-    background-color: #56ccf2;
-  }
-}
-
-.nav12 {
-  border-radius: 50px;
-  border: 2px solid #56ccf2;
-  padding: 8px 20px;
-  font-weight: 600px;
-  text-align: center;
-  width: fit-content;
-}
-
-.nav12:hover {
-  background-color: #56ccf2;
-}
-
-.dropdown-menu {
-  background: currentColor;
-  margin-left: -100px;
-  margin-top: 20px;
-}
-
-.nav-item {
-  margin-left: 25px;
-}
-
-/* MOBILE */
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
-
-  display: none;
-}
-
-.icon-mobile-nav {
-  color: white;
-  height: 30px;
-  width: 30px;
-}
-
-.icon-mobile-nav[name="close"] {
-  display: none;
-}
-
-@media (max-width: 991px) {
-  .nav12 {
-    margin-top: 10px;
-  }
-}
-
-.navbar-nav123 {
-  background: none;
-  border: none;
-}
-
-
-  </style>
-
 
 <nav class="navbar navbar-expand-lg bg-dark fixed-top" id="manNav">
   <div class="container-fluid">
@@ -124,8 +12,8 @@
     <button id="toggleButton" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon class="icon-mobile-nav" name="menu"></ion-icon></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end navigation" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 dropdown-menu navbar-nav123" aria-labelledby="dropdownMenuButton1">
+    <div class="collapse navbar-collapse justify-content-end navigation" id="navbarSupportedContent" >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 dropdown-menu navbar-nav123" aria-labelledby="dropdownMenuButton1" style="background: none;">
         <li class="nav-item one active">
           <a class="nav-link nav1" aria-current="page" href="#one">Services</a>
         </li>

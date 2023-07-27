@@ -1,1 +1,5 @@
-@import "pages.css";
+@import "./components/pages.css";
+@import "./components/services.css";
+@import "./components/recent.css";
+@import "./components/core_team.css";
+@import "./components/work_with_future.css"
