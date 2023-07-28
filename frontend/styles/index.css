@@ -1,5 +1,6 @@
-@import "./components/pages.css";
-@import "./components/services.css";
-@import "./components/recent.css";
-@import "./components/core_team.css";
-@import "./components/work_with_future.css"
+@import "nav.css";
+@import "services.css";
+@import "recent_work.css";
+@import "core_team.css";
+@import "work_with_future.css";
+@import "footer.css"
