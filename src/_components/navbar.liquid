@@ -1,37 +1,45 @@
-<header>
-<nav class="navbar navbar-expand-lg bg-dark fixed-top" id="manNav">
-  <div class="container-fluid">
-    <div>
-      <a href="#six" class="six">
-        <img src="{{ '/images/om19.png' | relative_url }}" style=" width: 130px; height: 25px; " alt="Logo" />
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg fixed-top site-navbar" id="mainNav">
+    <div class="container">
+      <a href="#top" class="navbar-brand site-brand" aria-label="Go to top of page">
+        <img src="{{ '/images/om19.png' | relative_url }}" class="site-brand-image" alt="Ompirit logo" />
       </a>
-    </div>
-    
-    <div class="">
-    <button id="toggleButton" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon class="icon-mobile-nav" name="menu"></ion-icon></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end navigation" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 dropdown-menu navbar-nav123" aria-labelledby="dropdownMenuButton1" style="background: #212529;">
-        <li class="nav-item one active">
-          <a class="nav-link nav1" aria-current="page" href="#one">Services</a>
-        </li>
-        <li class="nav-item two">
-          <a class="nav-link nav1" href="#two">Work</a>
-        </li>
-        <li class="nav-item three">
-          <a class="nav-link nav1" href="#three">Core Team</a>
-        </li>
-        <li class="nav-item four">
-          <a class="nav-link nav1" href="#four" tabindex="-1" aria-disabled="true">Technology</a>
-        </li>
-        <li class="nav-item five">
-          <a class="nav-link text-white nav1 nav12" href="#five">&nbsp;&nbsp;&nbsp;Let's Talk&nbsp;&nbsp;&nbsp;</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </div>
-</nav>
-</header>
 
+      <button
+        id="toggleButton"
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end navigation" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item active">
+            <a class="nav-link nav1" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav1" href="#case-study">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav1" href="#team">CTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav1" href="#process">Process</a>
+          </li>
+          <li class="nav-item nav-item-cta">
+            <a class="nav-link nav1 nav12" href="#contact">
+              <span>Book a Call</span>
+              <span class="nav12-icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
