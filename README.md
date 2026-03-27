@@ -58,6 +58,23 @@ You can deploy Bridgetown sites on hosts like Render or Vercel as well as tradit
 
 > Read the [Bridgetown Deployment Documentation](https://www.bridgetownrb.com/docs/deployment) for more information.
 
+### GitHub Pages Contact Form
+
+This site is configured to use Formspree for the contact form when deployed as a static site on GitHub Pages.
+
+1. Create a form in Formspree.
+2. Copy the endpoint URL. It will look like `https://formspree.io/f/abcxyzpd`.
+3. Open [src/_data/site_metadata.yml](/Users/sarbadajaiswal/development/ompiritSoftwarePvtLtd/ompiritHtml/ompirit/src/_data/site_metadata.yml).
+4. Replace:
+
+```yml
+formspree_endpoint: https://formspree.io/f/your-form-id
+```
+
+with your real Formspree endpoint.
+
+After that, push the code to GitHub and the contact form will work on the live static site.
+
 ## Contributing
 
 If repo is on GitHub:

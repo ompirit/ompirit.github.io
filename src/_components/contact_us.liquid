@@ -1,192 +1,79 @@
-<style>
-  .form-control{
-  border: 1px solid #4F4F4F;
-  background-color: #333333;
-  color: #4F4F4F;
-}
+<section id="contact" class="homepage-section contact-section" aria-labelledby="contact-title">
+  <div class="section-header">
+    <p class="section-kicker">START A CONVERSATION</p>
+    <h2 id="contact-title" class="section-title">Tell me what you need to build, improve, or unblock</h2>
+    <p class="section-summary">
+      Share your product idea, technical challenge, or delivery problem. I will reply with a practical next step, not a generic sales message.
+    </p>
+  </div>
 
-.p00{
-  width: 138px;
-  height: 38px;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 38px;
-  color: #56CCF2;
-}
+  <div class="contact-layout">
+    <form
+      class="contact-form"
+      action="{{ metadata.formspree_endpoint }}"
+      method="POST"
+      data-contact-form
+    >
+      <div class="contact-feedback" data-contact-feedback aria-live="polite"></div>
 
-.p01{
-  font-size: 28px;
-  font-weight: 500;
-  font-family: sans-serif;
-  line-height: 30px;
-}
+      <div class="form-row">
+        <label class="form-field">
+          <span>First name</span>
+          <input type="text" class="form-control" name="first_name" required placeholder="First name">
+        </label>
+        <label class="form-field">
+          <span>Last name</span>
+          <input type="text" class="form-control" name="last_name" required placeholder="Last name">
+        </label>
+      </div>
 
+      <div class="form-row">
+        <label class="form-field">
+          <span>Email</span>
+          <input type="email" class="form-control" name="email" required placeholder="name@example.com">
+        </label>
+        <label class="form-field">
+          <span>Phone</span>
+          <input type="text" class="form-control" name="phone" placeholder="+977 98XXXXXXXX">
+        </label>
+      </div>
 
+      <label class="form-field">
+        <span>Project details</span>
+        <textarea class="form-control" name="message" required placeholder="Tell us about the product, timeline, and what is blocking progress right now."></textarea>
+      </label>
 
-.Component{
-  width: 100px;
-  height: 100px;
-}
+      <input type="hidden" name="_subject" value="New homepage enquiry from Ompirit" />
+      <input type="hidden" name="_captcha" value="false" />
 
-.Component:hover {
-  border: 2px solid #56CCF2;
-  border-radius: 10px;
-  background-color: black;
-}
+      <div class="contact-actions">
+        <button type="submit" class="form-tag">Send enquiry</button>
+        <p class="contact-note">Prefer email or phone? Reach me directly using the details on the right.</p>
+      </div>
+    </form>
 
-.form-tag{
-  width: 235px;
-  height: 70px;
-  border-radius: 56px;
-  color: #56CCF2;
-  background-color: #333333;
-  border: 1px solid #4F4F4F;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
-}
+    <aside class="contact-panel">
+      <div class="contact-panel-block">
+        <p class="contact-label">Contact</p>
+        <a href="tel:+9779847259410" class="contact-link">(+977) 9847259410</a>
+        <a href="mailto:support@ompirit.com" class="contact-link">support@ompirit.com</a>
+      </div>
 
-.form-tag:hover {
-  border: 1px solid #56CCF2;
-}
+      <div class="contact-panel-block">
+        <p class="contact-label">Common reasons to reach out</p>
+        <ul class="contact-reasons">
+          <li>You need senior help to build an MVP, internal tool, or product feature.</li>
+          <li>You want support with Rails development, DevOps, debugging, or system improvements.</li>
+          <li>You need a technical partner who can communicate clearly and work hands-on.</li>
+        </ul>
+      </div>
 
-.contact1231 {
-  margin-left: 370px;
-}
-
-@media (max-width: 1399px) {
-  .contact1231 {
-    margin-left: 194px;
-  }
-}
-
-
-@media (max-width: 1199px) {
-  body {
-    .Component{
-      width: 70px;
-      height: 70px;
-    }
-
-    .p01 {
-      font-size: 22px;
-    }
-
-    .contact1231 {
-      margin-left: 105px;
-    }
-  }
-} 
-
-@media (max-width: 991px) {
-  body {
-    .p00 {
-      font-size: 20px;
-    }
-
-    .p01 {
-      font-size: 16px;
-    }
-
-    .Component{
-      width: 50px;
-      height: 50px;
-    }
-
-    .submit123 {
-      text-align: center;
-    }
-
-    .contact1231 {
-      margin-left: auto;
-    }
-  }
-} 
-
-@media (max-width: 767px) {
-  body {
-    .contact123 {
-      text-align: center;
-    }
-
-    .contact1231 {
-      text-align: center;
-    }
-
-    .contact12312{
-      text-align: -webkit-center;
-    }
-
-    .contact123121 {
-      text-align: -webkit-center;
-    }
-
-    .contact321 {
-      width: 100%;
-      text-align: center;
-    }
-  }
-} 
-
-.contact123{
-  margin-top: 100px;
-}
-</style>
-
-
-<section id="five">
-    <div>
-      <div class="text-white contact123">
-        <span class="span321">Schedule a call</span>  
-        <h2>Let's talk business</h2>
-      </div>  
-      <div class="row mt-5 mb-4">
-        <div class="col col321 text-white">
-          <div class="row g-3 mb-4">
-            <div class="col">
-              <input type="text" class="form-control" name="first_name" required placeholder="First name" aria-label="First name" style="height: 55px">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" name="last_name" required placeholder="Last name" aria-label="Last name" style="height: 55px">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">        
-              <input type="email" class="form-control" name="email" required id="exampleFormControlInput1" placeholder="name@example.com" style="height: 55px">
-            </div>  
-            <div class="col">  
-              <input type="text" class="form-control" name="phone" required size="10" id="formGroupExampleInput" placeholder="Phone" style="height: 55px">
-            </div> 
-          </div>
-
-
-          <div class="input-group mt-4">
-            <textarea class="form-control" name="message" required aria-label="With textarea" placeholder="What would you like to know about?" style="height: 170px; width: 570px"></textarea>
-          </div>
-
-          <div class="mt-3 submit123">
-            <input type="submit" value="Submit" class="btn btn-dark form-tag">
-          </div>
-
+      <div class="contact-panel-block">
+        <p class="contact-label">Profiles</p>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/sarbada-nanda-jaiswal-6a461aba/" aria-label="Sarbada on LinkedIn"><img src="{{ '/images/Linkedin1234.png' | relative_url }}" class="Component" alt="LinkedIn logo" /></a>
         </div>
-
-        <div class="col text-white col321 contact1231">
-          <div class="contact12312">
-            <p class="p00">Contact us</p>
-            <p class="p01">(+977) 9847259410</p>
-            <p class="p01">support@ompirit.com</p>
-          </div> 
-        
-          <div class="mt-5 contact123121">
-            <p class="p00">Follow us </div>
-            <div class="">
-            <a href="#"><img src="{{ '/images/Facebook1234.png' | relative_url }}" class="Component" alt="rss feed" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="{{ '/images/Linkedin1234.png' | relative_url }}" class="Component" alt="rss feed" /></a>&nbsp;&nbsp;
-          </div> 
-        </div>  
-      </div> 
-    </div>
-</section>  
-
+      </div>
+    </aside>
+  </div>
+</section>
