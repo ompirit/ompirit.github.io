@@ -153,6 +153,31 @@ textarea.form-control {
   line-height: 1.6;
 }
 
+.contact-copy {
+  width: fit-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.contact-copy:hover {
+  color: var(--text-main);
+}
+
+.contact-copy:focus-visible {
+  outline: 2px solid rgba(86, 204, 242, 0.5);
+  outline-offset: 4px;
+}
+
+[data-email-feedback] {
+  margin: 6px 0 0;
+}
+
 .contact-reasons {
   margin: 0;
   padding-left: 20px;

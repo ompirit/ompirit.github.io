@@ -56,7 +56,14 @@
       <div class="contact-panel-block">
         <p class="contact-label">Contact</p>
         <a href="tel:+9779847259410" class="contact-link">(+977) 9847259410</a>
-        <a href="mailto:support@ompirit.com" class="contact-link">support@ompirit.com</a>
+        <a
+          href="mailto:{{ metadata.email }}"
+          class="contact-link"
+          data-email-link
+          data-email-address="{{ metadata.email }}"
+        >{{ metadata.email }}</a>
+        <button type="button" class="contact-copy" data-copy-email data-email-address="{{ metadata.email }}">Copy email</button>
+        <div class="contact-feedback" data-email-feedback aria-live="polite"></div>
       </div>
 
       <div class="contact-panel-block">

@@ -7,6 +7,9 @@ function ready() {
   const mobileBreakpoint = window.matchMedia("(max-width: 991px)")
   const contactForm = document.querySelector("[data-contact-form]")
   const contactFeedback = document.querySelector("[data-contact-feedback]")
+  const emailLink = document.querySelector("[data-email-link]")
+  const copyEmailButton = document.querySelector("[data-copy-email]")
+  const emailFeedback = document.querySelector("[data-email-feedback]")
   const syncHeaderOffset = () => {
     const headerOffset = header ? header.offsetHeight : 88
     document.documentElement.style.setProperty("--nav-scroll-offset", `${headerOffset}px`)
@@ -86,11 +89,19 @@ function ready() {
   syncHeaderOffset()
   onScroll()
 
-  const setContactFeedback = (message, statusClass) => {
-    if (!contactFeedback) return
+  const setFeedbackMessage = (element, message, statusClass) => {
+    if (!element) return
 
-    contactFeedback.textContent = message
-    contactFeedback.className = `contact-feedback is-visible ${statusClass}`
+    element.textContent = message
+    element.className = `contact-feedback is-visible ${statusClass}`
+  }
+
+  const setContactFeedback = (message, statusClass) => {
+    setFeedbackMessage(contactFeedback, message, statusClass)
+  }
+
+  const setEmailFeedback = (message, statusClass) => {
+    setFeedbackMessage(emailFeedback, message, statusClass)
   }
 
   if (contactForm && contactFeedback) {
@@ -135,6 +146,40 @@ function ready() {
           submitButton.disabled = false
           submitButton.textContent = originalLabel
         }
+      }
+    })
+  }
+
+  if (emailLink && emailFeedback) {
+    emailLink.addEventListener("click", () => {
+      const emailAddress = emailLink.getAttribute("data-email-address") || emailLink.textContent.trim()
+
+      setEmailFeedback("Opening your email app...", "is-success")
+
+      window.setTimeout(() => {
+        if (document.visibilityState === "visible" && document.hasFocus()) {
+          setEmailFeedback(`If nothing opened, your browser may not have a mail app linked. Copy ${emailAddress} or send to it manually.`, "is-error")
+        }
+      }, 1200)
+    })
+  }
+
+  if (copyEmailButton && emailFeedback) {
+    copyEmailButton.addEventListener("click", async () => {
+      const emailAddress = copyEmailButton.getAttribute("data-email-address")
+
+      if (!emailAddress) return
+
+      if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+        setEmailFeedback(`Copy ${emailAddress} manually if your email app did not open.`, "is-error")
+        return
+      }
+
+      try {
+        await navigator.clipboard.writeText(emailAddress)
+        setEmailFeedback(`${emailAddress} copied to your clipboard.`, "is-success")
+      } catch (error) {
+        setEmailFeedback(`Copy ${emailAddress} manually if your email app did not open.`, "is-error")
       }
     })
   }
